@@ -41,7 +41,7 @@ describe('campaign',()=>{
  })
  it('manager address',async()=>{
   const manager = await campaign.methods.manager().call();
-  //console.log("manager::"+manager);
+  console.log("manager::"+manager);
   assert (manager,accounts[0]);
   })
   it('allow people to contribute',async()=>{
@@ -58,6 +58,7 @@ describe('campaign',()=>{
         from:accounts[1],
         value:'5'
       });
+      //判断投资人是否投资成功
       const isContribute = await campaign.methods.approvers(accounts[1]).call();
     //  console.log("isContribute=="+isContribute);
       assert(isContribute);

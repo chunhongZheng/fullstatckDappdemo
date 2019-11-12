@@ -3,7 +3,7 @@ import React,{Component} from 'react';
 //   return <h1>hello index</h1>;
 import factory from '../ethereum/factory';
 class Compaindex extends Component{
-  //初如化函数
+  //初如化函数,并没有调用javascript代码,next服务器依然会进行初始化
   static async getInitialProps(){
     const campaign = await factory.methods.getDeployedCampaign().call();
     console.log(campaign);
@@ -11,11 +11,11 @@ class Compaindex extends Component{
   }
 
   async componentDidMount(){
-   const campaignfactory= factory.options.address;
-   console.log("campaignfactory=="+campaignfactory);
+  // const campaignfactory= factory.options.address;
+  // console.log("campaignfactory=="+campaignfactory);
 
-    const compaign = await factory.methods.getDeployedCampaign().call();
-    console.log(compaign);
+  //  const compaign = await factory.methods.getDeployedCampaign().call();
+  //  console.log(compaign);
   }
 
   render(){
