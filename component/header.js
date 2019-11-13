@@ -3,7 +3,7 @@ import { Menu } from 'semantic-ui-react'
 
 export  default ()=>{
    return (
-     <Menu>
+     <Menu style={{marginTop:'20px'}}>
        <Menu.Item>
          首页
        </Menu.Item>

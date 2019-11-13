@@ -26,10 +26,10 @@ class Compaindex extends Component{
   renderCampaign(){
     const item=this.props.campaign.map(address=>{
          return {
-           header: address,
-           description:  <Label><Icon name='mail' /> 查看众筹</Label>,
-           meta: "meta"+address,
-           fluid: false
+           header: "合约地址:"+address,
+           description:  <Label><Icon name='bitcoin' /> 查看众筹</Label>,
+        //   meta: "meta"+address,
+           fluid: true
 
          }
     })
@@ -43,7 +43,7 @@ class Compaindex extends Component{
    return (
      <Layout>
      <div>
-      <h3>众筹列表</h3>      
+      <h3>众筹列表</h3>
       <Button floated="right"  content='创建众筹' icon='add' labelPosition='right' primary/>
       {this.renderCampaign()}
      </div>
