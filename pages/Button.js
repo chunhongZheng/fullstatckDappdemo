@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-
 class Button extends Component {
   render() {
 
-      return <button>按钮页面</button>;
+      return <button class="ui button">按钮33页面</button>;
   }
 }
 
