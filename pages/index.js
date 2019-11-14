@@ -12,6 +12,7 @@ class Compaindex extends Component{
   static async getInitialProps(){
     const campaign = await factory.methods.getDeployedCampaign().call();
     console.log(campaign);
+
     return{campaign};
   }
 
@@ -27,8 +28,7 @@ class Compaindex extends Component{
     const item=this.props.campaign.map(address=>{
          return {
            header: "合约地址:"+address,
-           description: <Link route={'/campaign/${address}'}><Label><Icon name='bitcoin' /> 查看众筹</Label></Link>,
-        //   meta: "meta"+address,
+           description:   <Link route='showCampaignDetail' params={{address: address}}><Label><Icon name='bitcoin' /> <a>查看众筹</a></Label></Link>,      
            fluid: true
 
          }
