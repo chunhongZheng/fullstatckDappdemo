@@ -29,17 +29,7 @@ class CompaignShow extends React.Component{
     approvesCount,
     manager
     }=this.props;
-    // const items = [
-    //   (
-    //      header : manager,
-    //      meta : '管理员地址',
-    //      description : '当前管理者创建了众筹列表'
-    //
-    //   )
-    // ];
-
-
-const items2 = [
+const items = [
   {
     header: manager,
     description:'当前管理者创建了众筹列表',
@@ -71,7 +61,7 @@ const items2 = [
   }
 
 ]
-     return <Card.Group items={items2} />;
+     return <Card.Group items={items} />;
   }
 
 
