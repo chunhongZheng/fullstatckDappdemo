@@ -5,7 +5,7 @@ import factory from '../ethereum/factory';
 import { Card,Button,Label,Icon} from 'semantic-ui-react';
 //import 'semantic-ui-css/semantic.min.css';
 import Layout from '../component/Layout';
-
+import {Router,Link} from '../routes';
 
 class Compaindex extends Component{
   //初如化函数,并没有调用javascript代码,next服务器依然会进行初始化
@@ -27,7 +27,7 @@ class Compaindex extends Component{
     const item=this.props.campaign.map(address=>{
          return {
            header: "合约地址:"+address,
-           description:  <Label><Icon name='bitcoin' /> 查看众筹</Label>,
+           description: <Link route={'/campaign/${address}'}><Label><Icon name='bitcoin' /> 查看众筹</Label></Link>,
         //   meta: "meta"+address,
            fluid: true
 
@@ -44,7 +44,11 @@ class Compaindex extends Component{
      <Layout>
      <div>
       <h3>众筹列表</h3>
-      <Button floated="right"  content='创建众筹' icon='add' labelPosition='right' primary/>
+      <Link route='/campaign/new'>
+        <Button floated="right"  content='创建众筹' icon='add' labelPosition='right' primary/>
+      </Link>
+
+
       {this.renderCampaign()}
      </div>
       </Layout>

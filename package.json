@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha",
-    "dev": "next dev"
+    "?dev": "只跑next.js只需配置next dev",
+    "dev": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,7 @@
     "ganache-cli": "^6.6.0",
     "mocha": "^6.2.0",
     "next": "^9.0.4",
+    "next-routes": "^1.4.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "semantic-ui-css": "^2.4.1",

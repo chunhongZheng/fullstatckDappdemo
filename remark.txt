@@ -1,0 +1,8 @@
+
+next routes:  在next.js中通过next routes进行动态路由
+semantic-ui-react 进行 react next.js的ui框架
+
+
+next路由深入
+在原先的 next基础上增加next routes帮助包，在工程根目录下增加routes.js及server.js, 让程序在启动next应用的时候增加了routes功能模块。
+并将原来的package.json中的 scripts脚本中的"dev": "next dev" 修改为"dev": "node server.js"。
