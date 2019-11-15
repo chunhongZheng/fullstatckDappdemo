@@ -1,7 +1,10 @@
 import React from 'react';
 import Layout from '../../component/Layout'
 import Campaign from '../../ethereum/campaign';
-import { Card} from 'semantic-ui-react';
+import { Card,Grid,Button} from 'semantic-ui-react';
+import ContributeForm from '../../component/contributeForm';
+import web3 from '../../ethereum/web3';
+import {Link} from '../../routes';
 class CompaignShow extends React.Component{
 
   static async getInitialProps(props){
@@ -54,9 +57,9 @@ const items = [
     meta: '投资人数量',
     style: {overflowWrap:'break-word'}
   },{
-    header: balance,
+    header: web3.utils.fromWei(balance, 'ether'),
     description:'当前众筹中，还剩下多少余额',
-    meta: '众筹总的金额',
+    meta: '众筹总的金额，单位为ether',
     style: {overflowWrap:'break-word'}
   }
 
@@ -73,7 +76,25 @@ const items = [
       return (
         <Layout>
           <h3>众筹详情页面</h3>
-          {this.renderCampaignCard()}
+          <Grid>
+          <Grid.Row>
+            <Grid.Column width={10}>
+            {this.renderCampaignCard()}
+            </Grid.Column>
+            <Grid.Column width={6}>
+                <ContributeForm   address={this.props.contractAddress}/>
+            </Grid.Column>
+          </Grid.Row>
+          <Grid.Row>
+            <Grid.Column>
+              <Link route='viewRequestDetail' params={{address: this.props.contractAddress}}>
+                <a> <Button primary content="查看请求"/> </a>
+              </Link>
+            </Grid.Column>
+          </Grid.Row>
+
+
+          </Grid>
         </Layout>
       )
 

@@ -25,7 +25,7 @@ class CreateCampaignForm extends React.Component{
        event.preventDefault();  //防止链接打开 URL 当点击提交按钮时阻止对表单的提交
        try{
          const accounts = await web3.eth.getAccounts();
-         console.log(accounts);
+         //console.log(accounts);
          this.setState({message:'开始创建众筹项目.....'});
          await factory.methods.createCampain(this.state.minunum).send(
            {
