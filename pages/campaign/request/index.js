@@ -8,15 +8,6 @@ class CompaignRequestIndex extends React.Component{
        const {address}=props.query;
        return {address};
     }
-    //创建注释
-    createComment(text) {
-        if (this.props.trim) {
-            text = text.trim();
-        }
-        return "<!-- 33333 -->";
-      //  return `<!-- ${text} -->`;
-    }
-
     render(){
   //  console.log("请求页面::合约地址"+this.props.address);
     return (

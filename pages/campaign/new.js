@@ -61,9 +61,10 @@ class CreateCampaignForm extends React.Component{
              }}
 
            />
-        <Button  loading={this.state.loading}   primary type='submit'>确认</Button>
-        <Message   error  header='错误原因'  content={this.state.errorMessge}  />
+
      </Form.Field>
+     <Button  loading={this.state.loading}   primary type='submit'>确认</Button>
+     <Message   error  header='错误原因'  content={this.state.errorMessge}  />
         <p>{this.state.message}</p>
       </Form>
     </Layout>

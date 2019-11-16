@@ -87,7 +87,7 @@ const items = [
           </Grid.Row>
           <Grid.Row>
             <Grid.Column>
-              <Link route='viewRequestDetail' params={{address: this.props.contractAddress}}>
+              <Link route='viewRequestList' params={{address: this.props.contractAddress}}>
                 <a> <Button primary content="查看请求"/> </a>
               </Link>
             </Grid.Column>

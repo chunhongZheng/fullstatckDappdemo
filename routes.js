@@ -32,7 +32,7 @@ routes.add(
   {name:'showCampaignDetail',pattern:'/campaign/:address',page:'/campaign/show'}
 );
 routes.add(
-    {name:'viewRequestDetail',pattern:'/campaign/:address/request',page:'/campaign/request/index'}
+    {name:'viewRequestList',pattern:'/campaign/:address/request',page:'/campaign/request/index'}
 );
 routes.add(
   {name:'createRequest',pattern:'/campaign/:address/request/createRequest',page:'/campaign/request/createRequest'}
