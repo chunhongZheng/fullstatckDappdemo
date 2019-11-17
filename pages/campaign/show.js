@@ -90,6 +90,9 @@ const items = [
               <Link route='viewRequestList' params={{address: this.props.contractAddress}}>
                 <a> <Button primary content="查看请求"/> </a>
               </Link>
+              <Link  route={`/campaign/${this.props.contractAddress}/request/createRequest`} >
+                 <a> <Button primary content="增加请求"/> </a>
+              </Link>
             </Grid.Column>
           </Grid.Row>
 

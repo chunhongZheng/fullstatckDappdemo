@@ -21,6 +21,7 @@ class ContributeForm extends React.Component{
 
 
     this.setState({loading: true});
+    this.setState({errorMessge: ""});
     try{
      const campaign=Campaign(this.props.address);
      const accounts = await web3.eth.getAccounts();

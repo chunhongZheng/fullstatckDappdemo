@@ -71,8 +71,8 @@ class CompaignRequestIndex extends React.Component{
                  <Table.HeaderCell>请求金额(ether)</Table.HeaderCell>
                  <Table.HeaderCell>受益人地址</Table.HeaderCell>
                  <Table.HeaderCell>投票人数/总人数</Table.HeaderCell>
+                 <Table.HeaderCell>是否投票</Table.HeaderCell>
                  <Table.HeaderCell>是否完成</Table.HeaderCell>
-                 <Table.HeaderCell>冻结</Table.HeaderCell>
                </Table.Row>
               </Table.Header>
               <Table.Body>

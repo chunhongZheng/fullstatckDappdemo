@@ -11,7 +11,7 @@ class Compaindex extends Component{
   //初如化函数,并没有调用javascript代码,next服务器依然会进行初始化
   static async getInitialProps(){
     const campaign = await factory.methods.getDeployedCampaign().call();
-    console.log(campaign);
+    //console.log(campaign);
 
     return{campaign};
   }
@@ -28,7 +28,7 @@ class Compaindex extends Component{
     const item=this.props.campaign.map(address=>{
          return {
            header: "合约地址:"+address,
-           description:   <Link route='showCampaignDetail' params={{address: address}}><Label><Icon name='bitcoin' /> <a>查看众筹</a></Label></Link>,      
+           description:   <Link route='showCampaignDetail' params={{address: address}}><Label><Icon name='bitcoin' /> <a>查看众筹</a></Label></Link>,
            fluid: true
 
          }
