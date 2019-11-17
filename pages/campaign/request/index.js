@@ -11,11 +11,11 @@ class CompaignRequestIndex extends React.Component{
        const campaign= Campaign(address);
        const requestCount=await campaign.methods.getRequestCount().call();//请求数量
        const approvesCount=await campaign.methods.approvesCount().call();//获取投资人的数量
-      // console.log("requestCount=="+requestCount);
+       console.log("requestCount=="+requestCount);
        //获取所有的requests,并将之填充至数组变量requests
        //现在一直是只有返回一条数据，并不会加载所有
        const requests = await Promise.all(
-           Array(requestCount).fill().map(async(element,index)=>{
+           Array(parseInt(requestCount)).fill().map(async(element,index)=>{
           //   console.log("fill index=="+index);
           //    console.log("requestCount=="+requestCount);
               return await campaign.methods.requests(index).call();

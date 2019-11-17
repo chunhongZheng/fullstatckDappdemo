@@ -8,7 +8,8 @@ const compileFactory = require('./build/CampaignFactory.json');
 const provider = new HDWalletProvider(
   'shoe tool cat news broccoli neutral invest sure buyer rice alien smooth',
   //'silver trophy quarter faint cabin gasp then layer fatigue goat deny false',
-  'https://ropsten.infura.io/v3/92b23057d31f463c98b8c7266d47febb'
+  //'https://ropsten.infura.io/v3/92b23057d31f463c98b8c7266d47febb'
+  'https://kovan.infura.io/v3/92b23057d31f463c98b8c7266d47febb'
 
 );
 const web3 = new Web3(provider);

@@ -40,6 +40,8 @@ contract Campaign{
         /**投资或者捐款**/
     function contribute() public payable{
       require(msg.value>minunumContribute);
+      //如果投资人已经投资过了，不重复计算投资人数量,防止统计出错
+      require(!approvers[msg.sender]);
       approvers[msg.sender]=true;
       approvesCount++;
     }
